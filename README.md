@@ -143,3 +143,21 @@ data.groupby(data.index.to_period('M')).mean() # 按年月。天不会算
 data.groupby(data.index.to_period('W')).mean() # 按年月周。
 ```
 
+## chapter7
+
+1. pandas and plot. 画条形图，可以直接使用Series.plot来画，x轴是index。y是数据
+
+2. 可以使用scatter画DataFrame的散点图。导入matplotlib模块，scatter(x=df.feature1, y=df.feature2)
+
+
+## chapter8
+
+本节重点。时间序列。请查看知乎 https://zhuanlan.zhihu.com/p/56077060
+
+1. 改变时间列pd.to_datetime()。将列别转换成时间
+2. 然后通常是将时间设置成索引。进行处理
+3. 判断时间是否有重复df.index.is_unique不用加括号
+4. resample 表示重新采样。 BM表示取数据中，每个月最后一个工作日
+
+- https://www.jianshu.com/p/061771f0afa9
+- 详细说明请查看知乎 https://zhuanlan.zhihu.com/p/56077060 有时还可以df.groupby([df.year, df.month])按年月来分类
